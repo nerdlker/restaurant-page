@@ -1,10 +1,5 @@
-import "./style.css";
-
 import loadHome from "./home";
 import loadMenu from "./menu";
-
-// Create Top Menu List
-const contentContainer = document.getElementById("content");
 
 const splashContainer = document.createElement("div");
 
@@ -35,8 +30,3 @@ menuItems.forEach((item) => {
 
   splashContainer.appendChild(menuItem);
 });
-
-// Append outside the forEach block
-contentContainer.appendChild(splashContainer);
-
-console.log("is this even working?");
