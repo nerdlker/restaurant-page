@@ -1,42 +1,28 @@
 import "./style.css";
-
-import loadHome from "./home";
-import loadMenu from "./menu";
+import splashScreen from "./splash";
 
 // Create Top Menu List
 const contentContainer = document.getElementById("content");
+const { loadHome, loadMenu } = splashScreen();
 
-const splashContainer = document.createElement("div");
-
-splashContainer.className = "splash";
-
-// Create Menu Items
-var menuItems = ["Home", "Menu", "About"];
 function clearContent() {
   contentContainer.innerHTML = "";
 }
 
-menuItems.forEach((item) => {
-  var menuItem = document.createElement("div");
-  menuItem.className = "menu-item";
-  menuItem.textContent = item;
-
-  menuItem.addEventListener("click", (e) => {
-    console.log(`${item} was clicked`);
+// Add Menu Event Listener
+contentContainer.addEventListener("click", (e) => {
+  if (e.target.classList.contains("menu-item")) {
     const loadPage = e.target.textContent;
-    if (loadPage == "Home") {
-      clearContent();
+    console.log(`${loadPage} was clicked`);
+
+    clearContent();
+
+    if (loadPage === "Home") {
+      splashScreen();
       loadHome();
-    } else if (loadPage == "Menu") {
-      clearContent();
+    } else if (loadPage === "Menu") {
+      splashScreen();
       loadMenu();
     }
-  });
-
-  splashContainer.appendChild(menuItem);
+  }
 });
-
-// Append outside the forEach block
-contentContainer.appendChild(splashContainer);
-
-console.log("is this even working?");

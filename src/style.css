@@ -57,6 +57,7 @@ p {
   overflow: hidden;
   width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
 }
 
 .food-name {
@@ -97,5 +98,5 @@ p {
   justify-items: center;
   align-items: center;
   width: fit-content;
-  background-color: #f4f4f4;
+  background-color: #dce6e6;
 }

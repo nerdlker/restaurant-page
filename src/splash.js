@@ -1,32 +1,27 @@
 import loadHome from "./home";
 import loadMenu from "./menu";
 
-const splashContainer = document.createElement("div");
+function splashScreen() {
+  const contentContainer = document.getElementById("content");
+  const splashContainer = document.createElement("div");
 
-splashContainer.className = "splash";
+  splashContainer.className = "splash";
 
-// Create Menu Items
-var menuItems = ["Home", "Menu", "About"];
-function clearContent() {
-  contentContainer.innerHTML = "";
-}
+  // Create Menu Items
+  var menuItems = ["Home", "Menu", "About"];
 
-menuItems.forEach((item) => {
-  var menuItem = document.createElement("div");
-  menuItem.className = "menu-item";
-  menuItem.textContent = item;
+  menuItems.forEach((item) => {
+    var menuItem = document.createElement("div");
+    menuItem.className = "menu-item";
+    menuItem.textContent = item;
 
-  menuItem.addEventListener("click", (e) => {
-    console.log(`${item} was clicked`);
-    const loadPage = e.target.textContent;
-    if (loadPage == "Home") {
-      clearContent();
-      loadHome();
-    } else if (loadPage == "Menu") {
-      clearContent();
-      loadMenu();
-    }
+    splashContainer.appendChild(menuItem);
+    console.log("splash executed");
   });
 
-  splashContainer.appendChild(menuItem);
-});
+  contentContainer.appendChild(splashContainer);
+
+  return { loadHome, loadMenu };
+}
+
+export default splashScreen;
