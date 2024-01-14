@@ -12,7 +12,7 @@ function loadAboutUs() {
 
   const interiorImg = document.createElement("img");
   interiorImg.className = "interior-img";
-  interiorImg.src = "../images/interior.jpg"; // Corrected file extension
+  interiorImg.src = "./images/interior.jpg"; // Corrected file extension
 
   const separator = document.createElement("div");
   separator.className = "separator";
