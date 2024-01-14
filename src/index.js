@@ -1,6 +1,7 @@
 import "./style.css";
 import splashScreen from "./splash";
 import loadAboutUs from "./about";
+import loadFooter from "./footer";
 
 // Create Top Menu List
 const contentContainer = document.getElementById("content");
@@ -22,13 +23,17 @@ contentContainer.addEventListener("click", (e) => {
     if (loadPage === "Home") {
       splashScreen();
       loadHome();
+      loadFooter();
     } else if (loadPage === "Menu") {
       splashScreen();
       loadMenu();
+      loadFooter();
     } else if (loadPage === "About") {
       splashScreen();
       loadAboutUs();
+      loadFooter();
     }
   }
 });
 loadHome();
+loadFooter();
