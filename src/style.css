@@ -100,3 +100,40 @@ p {
   width: fit-content;
   background-color: #dce6e6;
 }
+
+/*----------------------------------
+            ABOUT US 
+----------------------------------*/
+
+.interior-img {
+  width: 500px;
+  height: 433px;
+}
+
+.info {
+  display: flex;
+  padding: 5rem;
+  margin-left: 100px;
+  color: var(--grey);
+}
+
+.separator {
+  border: 2px solid var(--copper);
+  margin: 32px 57px;
+}
+.about-us-header {
+  text-align: center;
+  color: var(--copper);
+}
+
+.about-us-page {
+  display: block;
+  padding: 50px;
+}
+
+.about-us-info {
+  text-align: left;
+  padding: 1rem;
+  height: 433px;
+  overflow: scroll;
+}

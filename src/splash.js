@@ -1,5 +1,6 @@
 import loadHome from "./home";
 import loadMenu from "./menu";
+import loadAboutUs from "./about";
 
 function splashScreen() {
   const contentContainer = document.getElementById("content");
@@ -21,7 +22,7 @@ function splashScreen() {
 
   contentContainer.appendChild(splashContainer);
 
-  return { loadHome, loadMenu };
+  return { loadHome, loadMenu, loadAboutUs };
 }
 
 export default splashScreen;

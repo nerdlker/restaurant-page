@@ -1,8 +1,10 @@
 import "./style.css";
 import splashScreen from "./splash";
+import loadAboutUs from "./about";
 
 // Create Top Menu List
 const contentContainer = document.getElementById("content");
+
 const { loadHome, loadMenu } = splashScreen();
 
 function clearContent() {
@@ -23,6 +25,10 @@ contentContainer.addEventListener("click", (e) => {
     } else if (loadPage === "Menu") {
       splashScreen();
       loadMenu();
+    } else if (loadPage === "About") {
+      splashScreen();
+      loadAboutUs();
     }
   }
 });
+loadHome();
