@@ -6,7 +6,7 @@ function loadMenu() {
       name: "Dal Tadka",
       price: "220",
       imgID: 1,
-      url: "../images/dal_tadka.jpg",
+      url: "./images/dal_tadka.jpg",
       description:
         "Our house speciality Yellow Dal tempered with butter, cumin, red chilli powder and fried onions for add oomph",
     },
